@@ -1,4 +1,4 @@
-import {Carousel} from 'react-bootstrap'
+//import {Carousel} from 'react-bootstrap'
 import './Home.scss';
 
 function ImageSlider(){

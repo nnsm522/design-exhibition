@@ -1,4 +1,6 @@
 $mainFont : 'Spoqa Han Sans Neo';
+$navHeight : 65px;
+
 html{
     font-size: 62.5%;
 }
@@ -9,19 +11,22 @@ html{
 .navbar{
     font-size: 1.6rem;
     padding: 0;
-    height: 50px;
+    height: $navHeight;
+    border-bottom: 1px solid gray;
     .nav-link{
         margin-right: 50px;
     }
 }
 .navbar-brand{
-    font-size: 2.0rem;
+    font-size: 3.0rem;
     margin-left: 50px;
 }
 .navbar-nav{
     flex-direction: row;
 }
-
+.mg-top{
+    margin-top: $navHeight;
+}
 .footer{
     height: 50px;
     background-color: darkgray;

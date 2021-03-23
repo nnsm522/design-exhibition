@@ -1,6 +1,5 @@
 import {Jumbotron} from 'react-bootstrap'
 import './Home.scss';
-import ImageSlider from './ImageSlider.js';
 
 function Home(){
     return (
