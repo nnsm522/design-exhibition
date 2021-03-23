@@ -1,3 +1,6 @@
+## Design-Exhibition-Project
+명지대학교 만화애니콘텐츠학과 17학번 온라인 졸업전시회 프로젝트
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
