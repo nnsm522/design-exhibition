@@ -1,0 +1,35 @@
+$mainFont : 'Spoqa Han Sans Neo';
+html{
+    font-size: 62.5%;
+}
+
+.App{
+    font-family: $mainFont;
+}
+.navbar{
+    font-size: 1.6rem;
+    padding: 0;
+    height: 50px;
+    .nav-link{
+        margin-right: 50px;
+    }
+}
+.navbar-brand{
+    font-size: 2.0rem;
+    margin-left: 50px;
+}
+.navbar-nav{
+    flex-direction: row;
+}
+
+.footer{
+    height: 50px;
+    background-color: darkgray;
+    padding: 1px;
+        p{
+        margin: 17px;
+        text-align: center;
+        font-size: 1.2rem;
+        color: white;
+    }
+}
