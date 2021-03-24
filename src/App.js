@@ -4,10 +4,15 @@ import './App.scss';
 import Home from './page/home/Home.js';
 import Info from './page/info/Info.js';
 import professorData from './data/professor.js';
+import studentData from './data/student.js';
+import committeeData from './data/committee.js';
+
 
 function App() {
   let [page, setPage] = useState("home");
   let [professor, setProfessor] = useState(professorData);
+  let [student, setStudent] = useState(studentData);
+  let [committee, setCommittee] = useState(committeeData);
   
   return (
     <div className="App container">
@@ -24,7 +29,7 @@ function App() {
         {
           page === "home"
           ? (<Home></Home>)
-          : (<Info professor={professor}></Info>)
+          : (<Info professor={professor} student={student} committee={committee}></Info>)
         }
       </div>
       

@@ -1,3 +1,12 @@
+$title-font-size: 2.2rem;
+$name-font-size: 1.8rem;
+$words-font-size: 1.4rem;
+
+.col-md-7{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 .poster-container{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -21,4 +30,61 @@
 
 .poster-img{
     width: 100%;
+}
+
+.professor-words-container{
+    .professor-info{
+        .professor-position{
+            font-size: $title-font-size;
+            font-weight: 500;
+        }
+        .professor-name{
+            font-size: $name-font-size;
+            font-weight: 300;
+        }
+        .professor-major{
+            font-size: 1.4rem;
+            font-weight: 300;
+        }
+    }    
+    .professor-words-box{
+        .professor-words{
+            font-size: $words-font-size;
+            font-weight: 100;
+        }
+    }
+    
+}
+.committee-words-container{
+    .committee-info{
+        padding-top: 30px;
+        .committee-position{
+            font-size: $title-font-size;
+            font-weight: 500;
+        }
+        .committee-name{
+            font-size: $name-font-size;
+            font-weight: 300;
+        }
+        .committee-img-box{
+            .committee-img{
+                width: 100%;
+            }
+        }
+    }
+    .committee-words-box{
+        .committee-position{
+            font-size: $title-font-size;
+            font-weight: 500;
+        }
+        .committee-words{
+            font-size: $words-font-size;
+            font-weight: 100;
+        }
+    }
+}
+
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }

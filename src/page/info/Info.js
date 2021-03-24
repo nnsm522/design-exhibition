@@ -1,20 +1,84 @@
+import { PureComponent } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import './Info.scss';
-
+import Profile from './Profile.js';
 
 function Info(props){
     return (
-        <div className="info-container">
-					<PosterContainer/>
-          <ProfessorWords p={props.proffesor}/>
-        </div>
+			<div className="info-container">
+				<PosterContainer/>
+				<hr/>
+				{
+					props.professor.map(function(p, i){
+					return(
+						<>
+						<ProfessorWords
+							key={'professor'+i}
+							name={p.professor_name}
+							position={p.position}
+							major={p.major}
+							words={p.words}
+						/>
+						<hr/>
+						</>
+					)
+					})
+				}
+				<CommitteeWords
+					name={props.committee[0].names}
+					position={props.committee[0].position}
+					words={props.committee[0].words}
+				/>
+				<hr/>
+
+				<Profile student={props.student}/>
+			</div>
     )
+}
+
+function CommitteeWords(props){
+		return(
+			<div className="committee-words-container">
+				<Container>
+					<Row>
+						<Col md={5} className="committee-info">
+							<p className="committee-position">{props.position}</p>
+							{
+								props.name.map(function(n, i){
+									return (
+										<span className="committee-name" key={'committee'+i}>{n}&nbsp;&nbsp;&nbsp;</span>
+									)
+								})
+							}
+							<div className="committee-img-box">
+								<img className="committee-img" src="committee.jpg" alt=""/>
+							</div>
+						</Col>
+						<Col md={7} className="committee-words-box" >
+							<p className="committee-position">대표 유영경</p>
+							<p className="committee-words">{props.words}</p>
+						</Col>
+					</Row>
+				</Container>
+			</div>
+		)
 }
 
 function ProfessorWords(props){
 		return(
-			<div>
-				
+			<div className="professor-words-container">
+				<Container>
+					<Row>
+						<Col md={5} className="professor-info">
+							<p className="professor-position">{props.position}</p>
+							<p className="professor-name">{props.name}</p>
+							<p className="professor-major">{props.major}</p>
+						</Col>
+						<Col md={7} className="professor-words-box" >
+							<p className="professor-words">{props.words}</p>
+						</Col>
+					</Row>
+				</Container>
 			</div>
 		)
 }
@@ -24,10 +88,10 @@ function PosterContainer(){
 		<div className="poster-container">
 			<Container>
 				<Row>
-					<Col sm={5}>
+					<Col md={5} className="poster-left">
 						<img className="poster-img" src="poster.jpg" alt="poster"/>
 					</Col>
-					<Col sm={7}>
+					<Col md={7} className="poster-right">
 						<p className="poster-title-text">2020 명지대학교 디자인학부</p>
 						<p className="poster-title-text">만화애니콘텐츠학과 졸업전시회</p>
 						<p className="poster-subtitle-text">[Ciao : 피날레는 새로운 오프닝]</p>

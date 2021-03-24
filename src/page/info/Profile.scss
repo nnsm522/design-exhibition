@@ -1,0 +1,42 @@
+
+.profile-box{
+    cursor: pointer;
+    .profile-img{
+        display: block;
+        width: 100%;
+    }
+    .profile-overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 15px;
+        right: 0;
+        width: calc(100% - 30px);
+        height: 100%;
+        opacity: 0;
+        background-color: black;
+    }
+    .profile-name{
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 300;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0;
+    }
+    margin-bottom: 30px;
+    &:hover{
+        .profile-img{
+            opacity: 0.5;
+        }
+        .profile-overlay{
+            opacity: 0.5;
+        }
+        .profile-name{
+            opacity: 1;
+        }
+    }
+}
