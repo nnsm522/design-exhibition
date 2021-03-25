@@ -45,7 +45,6 @@ function App() {
 
       </div>
       
-      
       <div className="footer">
         <p>Copyright (c) MYOUNGJI UNIVERSITY. All Right Reserved.</p>
       </div>
