@@ -1,0 +1,78 @@
+.works-jumbotron{
+    margin-bottom: 0;
+    background-color: black;
+    color: white;
+    font-size: 1.6rem;
+    padding: 1px;
+    height: 400px;
+    span{
+        font-weight: bold;
+    }
+    p{
+        margin: 0;
+        font-weight: 100;
+    }
+    .works-jumbotron-description{
+        margin-top: 50px;
+        margin-left: 50px;
+        .part-text{
+            font-size: 3.6rem;
+            font-weight: 500;
+        }
+        .contour{
+            font-size: 2.0rem;
+            font-weight: 300;
+        }
+        .part-explanation{
+            font-size: 1.8rem;
+            font-weight: 100;
+        }
+    }
+}
+
+.part-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .part-btn{
+        width: 100%;
+        font-size: 1.8rem;
+        font-weight: 600;
+        background-color: white;
+        border: 2px solid gray;
+    }
+    .part-btn-active{
+        background-color: black;
+        color: white;
+    }
+}
+
+
+
+
+
+.works-poster-container{
+    .works-poster-box{
+        cursor: pointer;
+        margin-bottom: 20px;
+        img{
+            width: 100%;
+        }
+        p{
+            margin: 0;
+        }
+        .works-title-text{
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+        .works-student-name-text{
+            font-size: 2.0rem;
+            font-weight: 600;
+        }
+
+        &:hover{
+            img{
+                filter:brightness(50%)
+            }
+        }
+    }
+}

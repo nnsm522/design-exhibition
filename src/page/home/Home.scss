@@ -1,5 +1,5 @@
 
-.jumbotron{
+.home-jumbotron{
     margin-bottom: 0;
     background-color: black;
     color: white;
@@ -13,19 +13,19 @@
         font-weight: 100;
     }
 }
-.jumbotron-top{
+.home-jumbotron-top{
     height: 400px;
-    .jumbotron-description{
-        margin-top: 5rem;
-        margin-left: 5rem;
+    .home-jumbotron-description{
+        margin-top: 50px;
+        margin-left: 50px;
     }
 }
-.jumbotron-center{
+.home-jumbotron-center{
     background-color: white;
     color: black;
-    .jumbotron-description{
-        margin-top: 5rem;
-        margin-left: 5rem;
+    .home-jumbotron-description{
+        margin-top: 50px;
+        margin-left: 50px;
         margin-bottom: 5rem;
         h1{
             font-size: 4.8rem;
@@ -43,7 +43,7 @@
     }
     
 }
-.jumbotron-bottom{
+.home-jumbotron-bottom{
     height: 400px;
 }
 
