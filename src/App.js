@@ -24,7 +24,7 @@ function App() {
     <div className="App container">
       <div className="fixed-top container">
         <Navbar bg="white" expand="lg">
-          <Navbar.Brand href="/">Ciao</Navbar.Brand>
+          <Navbar.Brand href="#" onClick={()=>{setIsBoard(false); setPage("home");}}>Ciao</Navbar.Brand>
           <Nav className="ml-auto">
             <Nav.Link href="#info" onClick={()=>{setIsBoard(false); setPage("info");}}>INFO</Nav.Link>
             <Nav.Link href="#works" onClick={()=>{setIsBoard(false); setPage("works");}}>WORKS</Nav.Link>
