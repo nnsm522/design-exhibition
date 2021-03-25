@@ -1,0 +1,44 @@
+.title-box{
+    padding-top: 50px;
+    .title-text{
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+    .student-name-text{
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+}
+.board-hr{
+    margin-bottom: 50px;
+}
+
+.single-post-container{
+    margin-bottom: 50px;
+    text-align: center;
+    img{
+        width: 80%;
+    }
+}
+
+.multiple-post-poster-container{
+    .multiple-post-poster-box{
+        cursor: pointer;
+        margin-bottom: 20px;
+        img{
+            width: 100%;
+        }
+        p{
+            margin: 0;
+        }
+        .multiple-post-title-text{
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+        &:hover{
+            img{
+                filter:brightness(50%)
+            }
+        }
+    }
+}

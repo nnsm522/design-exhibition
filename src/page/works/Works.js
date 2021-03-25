@@ -28,7 +28,7 @@ function Works(props){
 										className={part===p.part ? "part-btn part-btn-active" : "part-btn"}
 										onClick={()=>{setPart(p.part);
 																	setExplanation(p.explanation);
-																}}
+														}}
 									>{p.part}</button>
 								</Col>
 							)
@@ -43,7 +43,9 @@ function Works(props){
 						props.student.map(function(s, i){
 							if (s.part === part){
 								return(
-									<Col className="works-poster-box">
+									<Col className="works-poster-box" key={'works-poster'+i}
+										onClick={() => {props.setSelectedStudent(s); props.setIsBoard(true);}}
+									>
 										<img src={"works/poster/"+s.student_name+" 포스터.jpg"} alt=""/>
 										<p className="works-title-text">{s.title}</p>
 										<p className="works-student-name-text">{s.student_name}</p>

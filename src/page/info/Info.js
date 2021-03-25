@@ -7,7 +7,7 @@ function Info(props){
     return (
 			<div className="info-container">
 				<PosterContainer/>
-				<hr/>
+				<hr className="info-hr"/>
 				{
 					props.professor.map(function(p, i){
 					return(
@@ -19,7 +19,7 @@ function Info(props){
 							major={p.major}
 							words={p.words}
 						/>
-						<hr/>
+						<hr className="info-hr"/>
 						</>
 					)
 					})
@@ -29,9 +29,9 @@ function Info(props){
 					position={props.committee[0].position}
 					words={props.committee[0].words}
 				/>
-				<hr/>
+				<hr className="info-hr"/>
 
-				<Profile student={props.student}/>
+				<Profile student={props.student} setSelectedStudent={props.setSelectedStudent} setIsBoard={props.setIsBoard}/>
 			</div>
     )
 }
