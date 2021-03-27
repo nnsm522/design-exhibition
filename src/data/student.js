@@ -4,6 +4,7 @@ export default [
         student_name: '김정규',
         title: 'Twisted World',
         works: ['김정규_TWISTED WORLD_1.png', '김정규_TWISTED WORLD_2.jpg'],
+        subtitle: ['Twisted World 1화', 'Twisted World 2화'],
         part: 'Webtoon'
     },
     {
@@ -60,6 +61,7 @@ export default [
         student_name: '조한비',
         title: '꿀벌이야기 / 엘리제를 위하여',
         works: ['조한비_허니비_1.jpg', '조한비_엘리제를 위하여_1.jpg'],
+        subtitle: ['꿀벌이야기', '엘리제를 위하여'],
         part: 'Concept art'
     },
     {

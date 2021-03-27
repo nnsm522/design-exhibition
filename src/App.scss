@@ -13,17 +13,23 @@ html{
     padding: 0;
     height: $navHeight;
     border-bottom: 1px solid gray;
+    .navbar-brand{
+        font-size: 3.0rem;
+        margin-left: 50px;
+    }
+    .navbar-back-arrow-img{
+        width: 30px;
+        cursor: pointer;
+        margin-left: 50px;
+    }
+    .navbar-nav{
+        flex-direction: row;
+    }
     .nav-link{
         margin-right: 50px;
     }
 }
-.navbar-brand{
-    font-size: 3.0rem;
-    margin-left: 50px;
-}
-.navbar-nav{
-    flex-direction: row;
-}
+
 .mg-top{
     margin-top: $navHeight;
 }

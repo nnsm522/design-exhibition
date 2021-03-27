@@ -1,29 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {Container, Col, Row, } from 'react-bootstrap'
 import './Board.scss';
 
 function Board(props){
-	let student = props.selectedStudent;
-	let title = student.title;
-	let student_name = student.student_name;
-	let works = student.works;
+	let selectedStudent = props.selectedStudent;
+	let selectedTitle = props.selectedTitle;
+	let [currentTitle, setCurrentTitle] = useState(selectedTitle);
 	let [detailWorks, setDetailWorks] = useState(null);
-	let [isDetail, setIsDetail] = useState(false);
+	let isDetail = props.isDetail;
+	let setIsDetail = props.setIsDetail;
+	
 	return (
 			<div className="board-container">
 				<div className="title-box">
-					<p className="title-text">{title}</p>
-					<p className="student-name-text">{student_name}</p>
+					<p className="title-text">{isDetail===false ? selectedTitle : currentTitle}</p>
+					<p className="student-name-text">{selectedStudent.student_name}</p>
 				</div>
 
 				<hr className="board-hr"/>
 
 				{
-					works.length === 1
-					? <SinglePost image={works[0]}/>
+					selectedStudent.works.length === 1
+					? <SinglePost image={selectedStudent.works[0]}/>
 					: (	isDetail === false
-							? <MultiplePost student={student} setIsDetail={setIsDetail} setDetailWorks={setDetailWorks}/>
-							: <DetailPost image={detailWorks} student={student}/>
+							? <MultiplePost selectedStudent={selectedStudent} setIsDetail={setIsDetail} setDetailWorks={setDetailWorks} setCurrentTitle={setCurrentTitle}/>
+							: <DetailPost image={detailWorks} selectedStudent={selectedStudent}/>
 						)
 				}
 
@@ -45,13 +46,13 @@ function MultiplePost(props){
 			<Container className="multiple-post-poster-container">
 				<Row md={3} sm={2} xs={1}>
 					{
-						props.student.works.map(function(works, i){
+						props.selectedStudent.works.map(function(works, i){
 							return(
 								<Col className="multiple-post-poster-box" key={'multiple-post-poster'+i}
-									onClick={()=>{props.setIsDetail(true); props.setDetailWorks(works)}}
+									onClick={()=>{props.setIsDetail(true); props.setDetailWorks(works); props.setCurrentTitle(props.selectedStudent.subtitle[i])}}
 								>
-									<img src={"works/poster/"+props.student.student_name+" 포스터.jpg"} alt=""/>
-									<p className="multiple-post-title-text">{works}</p>
+									<img src={"works/poster/"+props.selectedStudent.student_name+" 포스터.jpg"} alt=""/>
+									<p className="multiple-post-title-text">{props.selectedStudent.subtitle[i]}</p>
 								</Col>
 							)
 						})

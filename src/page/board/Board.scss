@@ -1,19 +1,22 @@
 .title-box{
     padding-top: 50px;
+    width: 80%;
     .title-text{
         font-size: 2.4rem;
         font-weight: 600;
+        margin-left: 50px;
     }
     .student-name-text{
         font-size: 1.6rem;
         font-weight: 400;
+        margin-left: 50px;
     }
 }
 .board-hr{
     margin-bottom: 50px;
 }
 
-.single-post-container{
+.single-post-container, .detail-post-container{
     margin-bottom: 50px;
     text-align: center;
     img{

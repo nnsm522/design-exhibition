@@ -4,8 +4,10 @@ import './Works.scss';
 import parts from './parts.js';
 
 function Works(props){
-	let [part, setPart] = useState(parts[0].part);
-	let [explanation, setExplanation] = useState(parts[0].explanation)
+	let selectedPart = props.selectedParts;
+	let setSelectedPart = props.setSelectedParts;
+	let [part, setPart] = useState(selectedPart.part)
+	let [explanation, setExplanation] = useState(selectedPart.explanation)
 
 	return (
 		<div className="works-container">
@@ -28,6 +30,7 @@ function Works(props){
 										className={part===p.part ? "part-btn part-btn-active" : "part-btn"}
 										onClick={()=>{setPart(p.part);
 																	setExplanation(p.explanation);
+																	setSelectedPart(p);
 														}}
 									>{p.part}</button>
 								</Col>
